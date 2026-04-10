@@ -49,4 +49,19 @@ void main(){
     print("Multiplicacion: indce $i * ${arreglo2[i]} = ${i * arreglo2[i]}");
   }
 
+  print("----------------------");
+  print("Punto 4. Busqueda");
+  print("----------------------");
+  var arreglo3 = [1,2,3,4,5,6,7,8,9,10];
+  print("Arreglo: $arreglo3");
+  int objetivo = 7;
+  print("Vamos a buscar el numero 7");
+  for (int i=0;i<arreglo3.length;i++) {
+    print("indice $i: ${arreglo3[i]}");
+    if (arreglo3[i] == objetivo) {
+      print("Numero ${arreglo3[i]} encontrado");
+      break;
+    }
+  }
+
 }
