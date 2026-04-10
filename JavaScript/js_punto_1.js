@@ -10,6 +10,7 @@ console.log("Punto 1, Declaracion y creacion de un arreglo")
 console.log("--------------------------")
 
 let arreglo = Array.from({ length: 10}, () => Math.floor(Math.random() * 10) + 1);
+let arreglo2 = Array.from({ length: 10}, () => Math.floor(Math.random() * 10) + 1);
 /*Utilizamos console.log para imprimir el arreglo y ver los numeros asignados. */
 console.log("Arreglo inicial", arreglo);
 console.log()
@@ -17,12 +18,34 @@ console.log("--------------------------")
 console.log("Punto 2, Recorrido e impresion")
 console.log("--------------------------")
 
+//Hacemos el for clasico, asignamos indice en i y hacemos recorrido hasta arreglo.lenght
 console.log("Recorrido for clasico:")
 for (let i = 0; i < arreglo.length; i++) {
     console.log(`Indice ${i}: ${arreglo[i]}`)
 }
 console.log()
+//Hacemos el forEach, asignamos variables e imprimimos
 console.log("Recorrido forEach")
 arreglo.forEach((valor, index) => {
     console.log(`Indice ${index}: ${valor}`)
 } )
+console.log()
+console.log("--------------------------")
+console.log("Punto 3, Modificacion")
+console.log("--------------------------")
+console.log()
+console.log("Cambiar todos los valores impares por cero")
+for (let i=0;i < arreglo.length;i++) {
+    if (arreglo[i] % 2 !== 0) {
+        arreglo[i] = 0
+    }
+
+}
+console.log('Arreglo modificado', arreglo)
+console.log()
+console.log('Multiplicar los valores por su indice')
+console.log("Arreglo: ", arreglo2)
+for (let i=0;i < arreglo2.length;i++) {
+    result = i * arreglo2[i]
+    console.log(`Multiplicacion: indice ${i} * elemento ${arreglo2[i]} = ${result}`)
+}
