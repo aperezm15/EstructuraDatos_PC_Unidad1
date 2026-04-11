@@ -48,8 +48,12 @@ console.log("---------------------------")
 console.log("Recorrido por columnas")
 for (let i=0;i<matriz.length;i++) {
     for (let j=0;j<matriz.length;j++){
+        //se intercambia las variables en el print,
+        //se utiliza process.stdout.write porque print tiene salto de
+        //linea.
         process.stdout.write(matriz[j][i]+ "\t")
     }
+    //salto de linea despues del recorrido de columnas
     console.log("\n")
 }
 console.log()
@@ -57,10 +61,14 @@ console.log("--------------------------")
 console.log("Punto 3, Operaciones")
 console.log("--------------------------")
 console.log()
+//se imprime tabla original
 console.table(matriz)
+//se crea variable para acumular la suma
 acumulador = 0
 for (let i=0;i<matriz.length;i++) {
     for (let j=0;j<matriz.length;j++){
+        //se hace la operacion para que vaya sumando en
+        //cada recorrido
         acumulador = acumulador + matriz[i][j]
     }
     
@@ -71,10 +79,16 @@ console.log("------------------------------")
 console.log("Intercambiar la primera fila con la ultima")
 console.table(matriz)
 console.log("matriz con primera y utlima fila intercambiadas")
+//se crea variable temporal para retener el indice 0 en esta variable
 temporal = matriz[0]
+//se pasa el indice 2 al indice 0
 matriz[0] = matriz[2]
+//temporal pasa su valor a indice 2.
 matriz[2] = temporal
+//se imprime la tabla de las dos formas.
+//console.table
 console.table(matriz)
+//imprimir tambla con for clasico.
 for (let i=0;i<matriz.length;i++) {
     for (let j=0;j<matriz.length;j++){
         process.stdout.write(matriz[i][j]+ "\t")
